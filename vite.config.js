@@ -7,6 +7,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages serves the site from https://kellydosocorro.github.io/lubien-birthday/
+  base: '/lubien-birthday/',
   plugins: [
     vue(),
     vueJsx(),

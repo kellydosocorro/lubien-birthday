@@ -1,4 +1,5 @@
 <script setup>
+import { publicAsset } from '@/utils/publicAsset'
 import { computed } from 'vue'
 import { mdiCalendarPlus, mdiMapMarker, mdiSailBoat } from '@mdi/js'
 import CompassRose from './icons/CompassRose.vue'
@@ -52,7 +53,7 @@ const machineReadableZone = [
         <div class="data-page__body">
           <figure class="id-photo">
             <img
-              src="/images/lubien-portrait.jpg"
+              :src="publicAsset('images/lubien-portrait.jpg')"
               :alt="`Retrato de ${party.honoree} em estilo mangá, de chapéu e óculos`"
               width="600"
               height="600"

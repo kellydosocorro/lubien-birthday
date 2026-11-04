@@ -1,4 +1,5 @@
 <script setup>
+import { publicAsset } from '@/utils/publicAsset'
 import { mdiChevronDown, mdiStar } from '@mdi/js'
 import CompassRose from './icons/CompassRose.vue'
 import MdiIcon from './MdiIcon.vue'
@@ -57,7 +58,7 @@ const emblemStars = [
           <div class="emblem" aria-hidden="true">
             <img
               class="emblem__badge"
-              src="/images/steel-ball-run-badge.png"
+              :src="publicAsset('images/steel-ball-run-badge.png')"
               alt=""
               width="700"
               height="917"

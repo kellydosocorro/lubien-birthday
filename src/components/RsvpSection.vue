@@ -1,4 +1,5 @@
 <script setup>
+import { publicAsset } from '@/utils/publicAsset'
 import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
 import {
   mdiAccountGroup,
@@ -84,7 +85,7 @@ const compactDate = party.dateShort.replaceAll(' ', '')
 
     <div class="container rsvp__grid">
       <figure class="rsvp__art" :class="`rsvp__art--${artMood}`" aria-hidden="true">
-        <img src="/images/johnny.jpg" alt="" width="941" height="1672" loading="lazy" />
+        <img :src="publicAsset('images/johnny.jpg')" alt="" width="941" height="1672" loading="lazy" />
         <SoundEffect char="ド" :count="4" class="rsvp__sfx" />
       </figure>
 

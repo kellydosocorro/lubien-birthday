@@ -1,4 +1,5 @@
 <script setup>
+import { publicAsset } from '@/utils/publicAsset'
 import { mdiHorseVariantFast } from '@mdi/js'
 import OrnamentDivider from './OrnamentDivider.vue'
 import CompassRose from './icons/CompassRose.vue'
@@ -35,7 +36,7 @@ import { party } from '@/config'
       <figure v-reveal="150" class="artwork">
         <div class="artwork__frame">
           <img
-            src="/images/gyro.jpg"
+            :src="publicAsset('images/gyro.jpg')"
             alt="Ilustração em estilo mangá de um cavaleiro de chapéu, em tons de marrom"
             width="936"
             height="924"
