@@ -41,7 +41,11 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav class="bottom-nav" :class="{ 'bottom-nav--visible': isVisible }" aria-label="Seções do convite">
+  <nav
+    class="bottom-nav"
+    :class="{ 'bottom-nav--visible': isVisible }"
+    aria-label="Seções do convite"
+  >
     <a
       v-for="item in items"
       :key="item.id"
@@ -136,15 +140,9 @@ onBeforeUnmount(() => {
     bottom: 20px;
   }
 
+  /* Icon stays above the label on every screen size */
   .bottom-nav__item {
-    flex-direction: row;
-    gap: 8px;
     font-size: 0.72rem;
-  }
-
-  .bottom-nav__item svg {
-    width: 18px;
-    height: 18px;
   }
 }
 </style>
